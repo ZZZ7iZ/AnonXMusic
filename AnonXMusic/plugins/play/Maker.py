@@ -1,62 +1,47 @@
 import asyncio
 from pyrogram import Client, filters
-from pyrogram import filters
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
-
 @app.on_message(
-    command(["","‹ اوامر التشغيل ›"])
+    command(["", "‹ اوامر التشغيل ›"])
     & filters.group
-    & ~filters.edited
 )
-async def maker(client: Client, message: Message):
+async def play_commands(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/cfa4e284f833555d0d168.jpg",
-        caption=f"""**- اوامر التشغيل اتبع مايلي
-        
- [— — — — — — — — — —](https://telegra.ph/file/6a6cf73ddb4fe08ca90e2.jpg)
+        photo="https://telegra.ph/file/cfa4e284f833555d0d168.jpg",
+        caption="""**- اوامر التشغيل اتبع مايلي
+
+[— — — — — — — — — —](https://telegra.ph/file/6a6cf73ddb4fe08ca90e2.jpg)
 ◇︰ تشغيل أو شغل : لبدء تشغيل الاغاني .
-
 ◇︰ بينج : لقياس سرعة النت في البوت .
-
 ◇︰أوامر القناة : تشغيل + أسم الأغنية  .
-
 ◇︰ كتم او مؤقت : لكتم الأغنية الحالية .
-
 ◇︰ كمل : لألغاء كتم الاغنية الحالية .
-
 ◇︰ تخطي : لتخطي الأغنية الحالية .
-
 ◇︰ ايقاف : لايقاف تشغيل الأغنية الحالية .**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                        "‹ السورس ›", url=f"https://t.me/H_M_Dr"),
-                    InlineKeyboardButton(
-                        "", url=f""),
+                    InlineKeyboardButton("‹ السورس ›", url="https://t.me/H_M_Dr"),
                 ],
                 [
-                   InlineKeyboardButton(
-                        "", url=f"https://t.me/N_G_12"),
+                    InlineKeyboardButton("‹ تواصل ›", url="https://t.me/N_G_12"),
                 ],       
             ]
         ),
     )
 
 @app.on_message(
-    command(["","‹ اوامر التفعيل ›"])
+    command(["", "‹ اوامر التفعيل ›"])
     & filters.group
-    & ~filters.edited
 )
-async def maker(client: Client, message: Message):
+async def activation_commands(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/cfa4e284f833555d0d168.jpg",
-        caption=f"""**
-- اوامر التفعيل اتبع مايلي
+        photo="https://telegra.ph/file/cfa4e284f833555d0d168.jpg",
+        caption="""**- اوامر التفعيل اتبع مايلي
 
 — — — — — — — — — —
 
@@ -78,65 +63,45 @@ async def maker(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                        "‹ السورس ›", url=f"https://t.me/H_M_Dr"),
-                    InlineKeyboardButton(
-                        "", url=f""),
+                    InlineKeyboardButton("‹ السورس ›", url="https://t.me/H_M_Dr"),
                 ],
                 [
-                   InlineKeyboardButton(
-                        "", url=f"https://t.me/N_G_12"),
+                    InlineKeyboardButton("‹ تواصل ›", url="https://t.me/N_G_12"),
                 ],       
             ]
         ),
     )
 
 @app.on_message(
-    command(["",""])
+    command(["", "‹ اوامر التسليه ›"])
     & filters.group
-    & ~filters.edited
 )
-async def maker(client: Client, message: Message):
+async def entertainment_commands(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/cfa4e284f833555d0d168.jpg",
-        caption=f"""**
--  اوامر التسليه
- — — — — — — — — — — 
- 
+        photo="https://telegra.ph/file/cfa4e284f833555d0d168.jpg",
+        caption="""**-  اوامر التسليه
+— — — — — — — — — — 
+
 - ( غنيلي ) يرسل لك اغنية عشوائية
-
 - ( فيلم ) فيلم كامل عشوائي
-
 - ( متحركة ) متحركات عشوائيه مميزة
-
 - ( اقتباسات ) اقتباس بالصورة جميل
-
 - ( اسمي ) لعرض اسمك الكامل
-
 - ( ا ) لعرض معلوماتك
-
 - ( تاك ) لعمل تاك جماعي في المجموعه
-
 - لو خيروك ↫ لعبة لو خيروك
-
 - كت تويت ↫ لعبة كت تويت عشوائي 
-
 - صراحه ↫ لعبة صراحه
-
 - اسئلة ↫ اسئلة عشوائيه
 — — — — — — — — — — — — — —**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                        "‹ السورس ›", url=f"https://t.me/H_M_Dr"),
-                    InlineKeyboardButton(
-                        "", url=f""),
+                    InlineKeyboardButton("‹ السورس ›", url="https://t.me/H_M_Dr"),
                 ],
                 [
-                   InlineKeyboardButton(
-                        "", url=f"https://t.me/N_G_12"),
+                    InlineKeyboardButton("‹ تواصل ›", url="https://t.me/N_G_12"),
                 ],       
             ]
         ),
